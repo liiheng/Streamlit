@@ -1,10 +1,12 @@
+!pip install openai
 import os
 import streamlit as st #important
 from openai import OpenAI
 #from google.colab import userdata
 #from IPython.display import Image
 
-client = OpenAI(api_key = os.environ['OPENAI_API_KEY'])
+#client = OpenAI(api_key = os.environ['OPENAI_API_KEY'])
+client = OpenAI(api_key = st.secrets['OPENAI_API_KEY'])
 
 #Story
 def story_gen(prompt):
